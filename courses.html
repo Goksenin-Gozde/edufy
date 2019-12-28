@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,16 +46,19 @@
                 <b class="caret"></b>
               </a>
               <div class="dropdown-menu dropdown-menu-left">
-                <a href="myCourses.html" class="dropdown-item"><i class="ion-ios-apps mr-2"></i> Kurslarım</a>
+                <a href="myCourses4.html" class="dropdown-item"><i class="ion-ios-apps mr-2"></i> Courses</a>
                 <button type="button" class="dropdown-item" data-toggle="modal" data-target="#tutorForm">
 					<i class="ion-ios-apps mr-2"></i> Be a Tutor
 				  </button> 
+				  <button type="button" class="dropdown-item" data-toggle="modal" data-target="#uploadVideo">
+					<i class="ion-ios-apps mr-2"></i> Upload Video
+					</button>      
               </div>
-            </li>
-	          <!--<li class="nav-item cta"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-ios-cloud-download mr-2"></i> Download</a></li>-->
+			</li>
+
 	        </ul>
 		  </div>
-	        <button type="button" class="btn btn-info btn-icon px-5" data-toggle="modal" data-target="#login">
+	        <button type="button" class="btn btn-info btn-icon px-5" data-toggle="modal" data-target="#login"id ="clear" >
 				Login
 			  </button> 
 		  </div>
@@ -86,14 +90,21 @@
 											<div class="img" style="background-image: url(images/goksenin.jpeg);"></div>
 											<span class= "position" > Tutor </span> <br>
 											<span class="position">Göksenin Gözde</span> <br>
-											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
-                                                    Enroll Course
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" id ="enrollPython">
+													Enroll Course
                                                   </button> 
 											<h3> FREE </h3>
 										</div>
 										
 									</div>
 								</div>
+								<script>
+								function createPython() {
+							
+									var x = document.createElement("pythonDisplay")
+								}
+								</script>
+
 								<div class="col-md-3 text-center">
 									<h2 class="heading-section mb-4">
 									<a href="https://www.google.com" class="btn btn-primary btn-link" role="button"><span><Small>Java 101</Small></span></a>
@@ -104,7 +115,7 @@
 											<div class="img" style="background-image: url(images/Elif.jpeg);"></div>
 											<span class= "position" > Tutor </span> <br>
 											<span class="position">Elif Nur Gözkonan</span><br>
-											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2">
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2" id = "enrollJava">
 												Enroll Course
 											  </button> 
 											<h3> 30 TL </h3>
@@ -124,13 +135,14 @@
 											<div class="img" style="background-image: url(images/Baris.jpeg);"></div>
 											<span class= "position" > Tutor </span> <br>
 											<span class="position">Barış Bülbül</span> <br>
-											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter3">
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2" id = "enrollSpring">
 												Enroll Course
 											  </button> 
 											<h3> 50 TL </h3>
 										</div>
 									</div>
 								</div>
+
 								<div class="col-md-3 text-center">
 									<h2 class="heading-section mb-4">
 											<a href="https://www.google.com" class="btn btn-primary btn-round btn-link" role="button"><span><Small>JavaScript</Small></span></a>
@@ -141,7 +153,7 @@
 											<div class="img" style="background-image: url(images/Umut.jpeg);"></div>
 											<span class= "position" > Tutor </span> <br>
 											<span class="position">Umut Gökbulut</span> <br>
-                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter4">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2" id = "enrollJs">
 												Enroll Course
 											  </button> 
                                             <h3> 15 TL </h3>
@@ -201,7 +213,7 @@
 								  </div>
 						</div>
 						<div class="footer text-center mb-2">
-						  <a href="courses.html" class="btn btn-primary btn-round px-5">Get Started</a>
+						  <a href="courses.html" class="btn btn-primary btn-round px-5">LOGIN</a>
 						</div>
 					  </form>
 					</div>
@@ -224,7 +236,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                      <a href = "myCourses.html"><button type="button" class="btn btn-success">My Courses</button></a>
+                      <a href = "myCourses4.html"><button type="button" class="btn btn-success">My Courses</button></a>
                     </div>
                   </div>
                 </div>
@@ -250,62 +262,12 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                      <a href = "myCourses2.html"><button type="button" class="btn btn-success">Proceed and checkout</button></a>
-                    </div>
-                  </div>
-                </div>
-			  </div>
-			  <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content-payment" >
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle" style = "color : wheats ">Payment</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-						<div>						
-							<input type="text" class="form-control" placeholder="Card Owner's Name"><br>
-							<input type="text" class="form-control" placeholder="Card Number"><br>
-							<input type="text" class="form-control" placeholder="Card Expiration Date"><br>
-							<input type="text" class="form-control" placeholder="CVV">					<br>
-						</div>
-						
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                      <a href = "myCourses3.html"><button type="button" class="btn btn-success">Proceed and checkout</button></a>
-                    </div>
-                  </div>
-                </div>
-			  </div>
-			  
-			  <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content-payment" >
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle" style = "color : wheats ">Payment</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-						<div>						
-							<input type="text" class="form-control" placeholder="Card Owner's Name"><br>
-							<input type="text" class="form-control" placeholder="Card Number"><br>
-							<input type="text" class="form-control" placeholder="Card Expiration Date"><br>
-							<input type="text" class="form-control" placeholder="CVV">					<br>
-						</div>
-						
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                       <a href = "myCourses4.html"><button type="button" class="btn btn-success">Proceed and checkout</button></a>
                     </div>
                   </div>
                 </div>
 			  </div>
+			  
 
 			  <div class="modal fade" id="tutorForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -334,13 +296,34 @@
                   </div>
                 </div>
 			  </div>
-  		<!-- <div class="mouse">
-				<a href="#" class="mouse-icon">
-					<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-				</a>
-			</div>
 
+			  <div class="modal fade" id="uploadVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content-payment" >
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle" style = "color : wheats ">Upload a Video</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+			<div>						
+			  <input type="text" class="form-control" placeholder= "Course Name"><br>
+			  <input type="text" class="form-control" placeholder="Video Name"><br>
+			  <input type="text" class="form-control" placeholder="Video Description"><br>
+			  <h5 style="color: wheat">Upload Video </h5>
+			<a href="#" id="select_logo" class=""></a> <input type="file" id="logo">
+			</div>
 			
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					  <a href = "#"><button type="button" class="btn btn-success" data-dismiss="modal">Upload</button></a>
+					</div>
+				  </div>
+				</div>
+			</div>
+  			
 	  </section>
 	  
 	  <section class="ftco-section" id="images">
@@ -364,7 +347,8 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/moment-with-locales.min.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       
     </body>
   </html>

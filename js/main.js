@@ -3,6 +3,60 @@
  	easing: 'slide'
  });
 
+(function(global) {
+	var displayPython = document.getElementById("enrollPython");
+	if(displayPython != null)
+	displayPython.addEventListener("click",function(){
+		global.localStorage.setItem("pythonDisplay","display");
+	},false);
+
+	var displayJava = document.getElementById("enrollJava");
+	if(displayJava != null)
+	displayJava.addEventListener("click",function(){
+		global.localStorage.setItem("javaDisplay","display");
+	},false);
+
+	var displayspring = document.getElementById("enrollSpring");
+	if(displayspring != null)
+	displayspring.addEventListener("click",function(){
+		global.localStorage.setItem("springDisplay","display");
+	},false);
+
+	var displayJs = document.getElementById("enrollJs");
+	if(displayJs != null)
+	displayJs.addEventListener("click",function(){
+		global.localStorage.setItem("jsDisplay","display");
+	},false);
+
+	var clearAllCache = document.getElementById("clear");
+	if(clearAllCache != null){
+		clearAllCache.addEventListener("click",function(){
+			global.localStorage.clear();
+		},false)
+	}
+
+
+	var coursesPage = document.getElementById("myCourses");
+	if(coursesPage != null){
+		coursesPage.onload = python();
+		function python(){
+			if(global.localStorage.getItem("pythonDisplay") != null){
+				document.getElementById("pythonCourse").style.display = "block";
+			}
+			if(global.localStorage.getItem("javaDisplay") != null){
+				document.getElementById("javaCourse").style.display = "block";
+			}
+			if(global.localStorage.getItem("springDisplay") != null){
+				document.getElementById("springCourse").style.display = "block";
+			}
+			if(global.localStorage.getItem("jsDisplay") != null){
+				document.getElementById("jsCourse").style.display = "block";
+			}
+
+		}
+	}
+}(window));
+
 (function($) {
 
 	"use strict";
