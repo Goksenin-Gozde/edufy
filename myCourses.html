@@ -25,9 +25,13 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+
   </head>
+
   <body>
 		
+
   <div class="main-section">
 
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -45,13 +49,19 @@
                 <b class="caret"></b>
               </a>
               <div class="dropdown-menu dropdown-menu-left">
-                <a href="#" class="dropdown-item"><i class="ion-ios-apps mr-2"></i> Kurslarım</a>
-                <a href="#" class="dropdown-item"><i class="ion-ios-document mr-2"></i> Mesajlarım</a>
+                <a href="courses.html" class="dropdown-item"><i class="ion-ios-apps mr-2"></i>Courses</a>
+                <button type="button" class="dropdown-item" data-toggle="modal" data-target="#tutorForm">
+					<i class="ion-ios-apps mr-2"></i> Be a Tutor
+				  </button> 
+				  <button type="button" class="dropdown-item" data-toggle="modal" data-target="#uploadVideo">
+					<i class="ion-ios-apps mr-2"></i> Upload Video
+					</button>      
               </div>
-            </li>
-	          <!--<li class="nav-item cta"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-ios-cloud-download mr-2"></i> Download</a></li>-->
+			</li>
+
 	        </ul>
-	      </div>
+		  </div>
+
 		  </div>
 	  </nav>
     <!-- END nav -->
@@ -59,38 +69,83 @@
   	<section class="hero-wrap" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
   		<div class="overlay"></div>
   		<div class="container">
-  			<div class="row description align-items-center justify-content-center">
-  				<div class="col-md-8 text-center">
-  					<div class="text">
-  						<h2>Edufy</h2>
-  						<h4 class="mb-5">Learn & Create & Develop.</h4>
-  					</div>
-				  </div>
-				  <div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<h2 class="heading-section mb-4">My Courses</h2>
-							<div class="row">
-								<div class="col-md-3 text-center">
-									<h2 class="heading-section mb-4">
-										<a href="https://www.google.com" class="btn btn-primary btn-round btn-link" role="button"><span><Small>Advanced Python</Small></span></a>
-									</h2>
-									<div class="image-wrap">
-										<img src="images/Python.png" alt="Round Image" class="rounded img-fluid image image-2">
-										<div class="text">
-											<div class="img" style="background-image: url(images/goksenin.jpeg);"></div>
-											<span class= "position" > Tutor </span> <br>
-											<span class="position">Göksenin Gözde</span> <br>
-										</div>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-  			</div>
-  		</div>
+            <div class="row description align-items-center justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="text">
+                        <h2>Edufy</h2>
+                        <h4 class="mb-5">Learn & Create & Develop.</h4>
+                    </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <h2 class="heading-section mb-4">My Courses</h2>
+                          <div class="row"  id = "myCourses">
+                           
+                              <div id = "pythonCourse" class="col-md-3 text-center" style = "display: none;" > 
+                      
+                                  <h2 class="heading-section mb-4">
+                                      <h3><Small>Advanced Python</Small></span></h3>
+                                  
+                                  <div class="image-wrap">
+                                      <img src="images/Python.png" alt="Round Image" class="rounded img-fluid image image-2">
+                                      <div class="text">
+                                          <div class="img" style="background-image: url(images/goksenin.jpeg);"></div>
+                                          <span class= "position" > Tutor </span> <br>
+                                          <span class= "position" > Göksenin Gözde </span> <br>
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+
+                        
+                              <div class="col-md-3 text-center" id = "javaCourse" style = "display: none;">
+                                  <h2 class="heading-section mb-4">
+                                    <h3><Small>Java 101</Small></span></h3>
+                                  </h2>
+                                  <div class="image-wrap">
+                                      <img src="images/Java.png" alt="Round Image" class="rounded img-fluid image image-2">
+                                      <div class="text">
+                                          <div class="img" style="background-image: url(images/Elif.jpeg);"></div>
+                                          <span class= "position" > Tutor </span> <br>
+                                          <span class="position">Elif Nur Gözkonan</span><br>
+                                      </div>
+                                  </div>
+      
+                              </div>
+      
+                              <div class="col-md-3 text-center" id = "springCourse" style = "display: none;">
+                                  <h2 class="heading-section mb-4">
+                                    <h3><Small>Spring Boot</Small></span></h3>
+                                  <div class="image-wrap">
+                                      <img src="images/Spring.png" alt="Round Image" class="rounded img-fluid image image-2">
+                                      <div class="text">
+                                          <div class="img" style="background-image: url(images/Baris.jpeg);"></div>
+                                          <span class= "position" > Tutor </span> <br>
+                                          <span class="position">Barış Bülbül</span> <br>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="col-md-3 text-center" id = "jsCourse" style = "display: none;">
+                                  <h2 class="heading-section mb-4">
+                                    <h3><Small>JavaScript</Small></span></h3>
+                                  </h2>
+                                  <div class="image-wrap">
+                                      <img src="images/JS.png" alt="Round Image" class="rounded img-fluid image image-2">
+                                      <div class="text">
+                                          <div class="img" style="background-image: url(images/Umut.jpeg);"></div>
+                                          <span class= "position" > Tutor </span> <br>
+                                          <span class="position">Umut Gökbulut</span> <br>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
 			
 	  </section>
 	  
@@ -116,6 +171,7 @@
     <script src="js/moment-with-locales.min.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="hide.js"></script>
       
     </body>
   </html>
